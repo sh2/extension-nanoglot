@@ -1,0 +1,59 @@
+{
+    "extension_name": {
+        "message": "NanoGlot - Secure Local Translator"
+    },
+    "extension_description": {
+        "message": "Privacy-focused extension to translate web pages locally using Chrome's Built-in AI."
+    },
+    "popup_button_copy": {
+        "message": "Copy"
+    },
+    "popup_copied": {
+        "message": "Copied."
+    },
+    "popup_button_run": {
+        "message": "Run again"
+    },
+    "popup_button_options": {
+        "message": "Open options page"
+    },
+    "popup_loading": {
+        "message": "Loading"
+    },
+    "popup_translating": {
+        "message": "Translating"
+    },
+    "popup_error_gesture_detector": {
+        "message": "The Language Detector needs to be downloaded the first time. Check your network connection and click \"$1\"."
+    },
+    "popup_error_gesture_translator": {
+        "message": "The Translator Model needs to be downloaded for each language pair the first time. Check your network connection and click \"$1\"."
+    },
+    "popup_error_injection_blocked": {
+        "message": "Unable to translate this page."
+    },
+    "popup_error_no_selection": {
+        "message": "Please select text to translate."
+    },
+    "popup_error_translation_unavailable": {
+        "message": "Translation from $1 to $2 is not available."
+    },
+    "options_title": {
+        "message": "Options - NanoGlot"
+    },
+    "options_language": {
+        "message": "Language for Translation"
+    },
+    "options_theme": {
+        "message": "Theme"
+    },
+    "options_font_size": {
+        "message": "Font Size"
+    },
+    "options_button_save": {
+        "message": "Save options"
+    },
+    "options_saved": {
+        "message": "Options saved."
+    }
+}
