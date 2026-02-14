@@ -1,4 +1,4 @@
-# extension-nanoglot
+# NanoGlot - Secure Local Translator
 
 Privacy-focused Chrome extension to translate web pages locally using Chrome's Built-in AI. No API key required — all processing happens on your device.
 
