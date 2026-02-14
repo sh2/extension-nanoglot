@@ -12,6 +12,7 @@ For more information, please refer to [Built-in AI APIs | Chrome for Developers]
 
 ## Setup
 
+This extension can be installed from [Chrome Web Store](https://chromewebstore.google.com/detail/lhikcconepbcnfhjopnalgbcjpgdhodi).
 The following are instructions for manual installation, for development purposes.
 
 1. Open 'Manage Extensions' page in Google Chrome browser.
