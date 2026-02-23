@@ -98,15 +98,40 @@ const createTranslator = async (sourceLanguage, targetLanguage) => {
 
 const translateText = async (translator, text) => {
   const contentElement = document.getElementById("content");
-  const stream = translator.translateStreaming(text);
-  let result = "";
 
-  for await (const chunk of stream) {
-    result += chunk;
-    contentElement.innerHTML = convertMarkdownToHtml(result, false);
+  // Split text by paragraph breaks (2 or more newlines)
+  const parts = text.split(/((?:\r?\n){2,})/);
+  let fullResult = "";
+
+  for (const part of parts) {
+    if (!part) continue;
+
+    // If the part is just newlines, append it directly
+    if (/^(?:\r?\n)+$/.test(part)) {
+      fullResult += part;
+      contentElement.innerHTML = convertMarkdownToHtml(fullResult, false);
+      continue;
+    }
+
+    // Skip translating whitespace-only paragraphs, just append them
+    if (part.trim() === "") {
+      fullResult += part;
+      contentElement.innerHTML = convertMarkdownToHtml(fullResult, false);
+      continue;
+    }
+
+    const stream = translator.translateStreaming(part);
+    let partResult = "";
+
+    for await (const chunk of stream) {
+      partResult += chunk;
+      contentElement.innerHTML = convertMarkdownToHtml(fullResult + partResult, false);
+    }
+
+    fullResult += partResult;
   }
 
-  return result;
+  return fullResult;
 };
 
 const main = async (useCache) => {
