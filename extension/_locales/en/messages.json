@@ -48,12 +48,12 @@
         "message": "Theme"
     },
     "options_font_size": {
-        "message": "Font Size"
+        "message": "Font size"
     },
     "options_button_save": {
         "message": "Save options"
     },
     "options_saved": {
-        "message": "Options saved."
+        "message": "Saved."
     }
 }
